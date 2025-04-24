@@ -28,9 +28,8 @@ class Car(Transport):
         super().__init__(brand, model, year)
         self.transmission_type = transmission_type
 
-    '''Переопределенный метод'''
     def get_info(self):
-        print(f"Transmission type: {self.transmission_type}")
+        print(f'Brand: {self.brand}, Model: {self.model}, Year: {self.year}\nTransmission Type: {self.transmission_type}')
 
 class Motorcycle(Transport):
 
@@ -39,7 +38,7 @@ class Motorcycle(Transport):
         self.engine_volume = engine_volume
 
     def get_info(self):
-        print(f"Engine volume: {self.engine_volume}")
+        print(f'Brand: {self.brand}, Model: {self.model}, Year: {self.year}\nEngine volume: {self.engine_volume}')
 
 
 car = Car('BMW', 'X5', 2021, 'Handed')
