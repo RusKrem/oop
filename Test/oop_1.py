@@ -29,7 +29,8 @@ class Car(Transport):
         self.transmission_type = transmission_type
 
     def get_info(self):
-        print(f'Brand: {self.brand}, Model: {self.model}, Year: {self.year}\nTransmission Type: {self.transmission_type}')
+        super().get_info()
+        print(f"TT : {self.transmission_type}")
 
 class Motorcycle(Transport):
 
@@ -37,8 +38,10 @@ class Motorcycle(Transport):
         super().__init__(brand, model, year)
         self.engine_volume = engine_volume
 
+
     def get_info(self):
-        print(f'Brand: {self.brand}, Model: {self.model}, Year: {self.year}\nEngine volume: {self.engine_volume}')
+        super().get_info()
+        print(f"EV : {self.engine_volume}")
 
 
 car = Car('BMW', 'X5', 2021, 'Handed')
